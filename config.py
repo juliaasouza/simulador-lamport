@@ -63,5 +63,25 @@ HOST = "127.0.0.1"
 # ==== CONFIGURAÇÃO DOS LOGS =======
 
 END_LOG = "events.txt"
+LOG_ORDENADO = "events_ordered.txt"
+
+# ===============================
+
+# ==== CONFIGURAÇÕES DO GRÁFICO =======
+
+
+FORMAS_EVENTOS = {
+    "RECEIVE": "o",
+    "EXEC": "s",
+    "SEND": "^"
+}
+
+CORES_CHAINS = {
+    "C1": "#3498db",
+    "C2": "#e67e22",
+    "C3": "#2ecc71"
+}
+
+TAMANHO_FIGURA = (16, 7)
 
 # ===============================

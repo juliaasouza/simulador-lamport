@@ -1,27 +1,7 @@
 import re
 import matplotlib.pyplot as plt
 
-from config import EXPERIMENTOS, VALOR_INICIAL
-
-# ==== CONFIGURAÇÕES DO GRÁFICO =======
-
-ARQUIVO_LOG = "events_ordered.txt"
-
-FORMAS_EVENTOS = {
-    "RECEIVE": "o",
-    "EXEC": "s",
-    "SEND": "^"
-}
-
-CORES_CHAINS = {
-    "C1": "#3498db",
-    "C2": "#e67e22",
-    "C3": "#2ecc71"
-}
-
-TAMANHO_FIGURA = (16, 7)
-
-# ===============================
+from config import EXPERIMENTOS, VALOR_INICIAL, FORMAS_EVENTOS, CORES_CHAINS, LOG_ORDENADO, TAMANHO_FIGURA
 
 def leLog():
 
@@ -32,7 +12,7 @@ def leLog():
     experiments = {}
     current_experiment = None
 
-    with open(ARQUIVO_LOG, "r", encoding="utf-8") as file:
+    with open(LOG_ORDENADO, "r", encoding="utf-8") as file:
 
         for line in file:
 
