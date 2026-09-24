@@ -1,0 +1,117 @@
+
+======================================================================
+EXPERIMENTO 1 - EVENTOS ORDENADOS
+======================================================================
+[Processo P1] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P2] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P3] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P1] Evento: RECEIVE | Relogio Logico: 1 | Detalhes: Origem = MAIN Valor = 10 | Cadeia: C1
+[Processo P1] Evento: EXEC | Relogio Logico: 2 | Detalhes: Valor = 10 Resultado = 9 | Cadeia: C1
+[Processo P1] Evento: SEND | Relogio Logico: 3 | Detalhes: Destino = P2 Valor = 9 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 4 | Detalhes: Origem = P1 Valor = 9 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 5 | Detalhes: Valor = 9 Resultado = 18 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 6 | Detalhes: Destino = P3 Valor = 18 | Cadeia: C1
+[Processo P3] Evento: RECEIVE | Relogio Logico: 7 | Detalhes: Origem = P2 Valor = 18 | Cadeia: C1
+[Processo P3] Evento: EXEC | Relogio Logico: 8 | Detalhes: Valor = 18 Resultado = 21 | Cadeia: C1
+[Processo P3] Evento: SEND | Relogio Logico: 9 | Detalhes: Destino = P2 Valor = 21 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 10 | Detalhes: Origem = P3 Valor = 21 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 11 | Detalhes: Valor = 21 Resultado = 42 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 12 | Detalhes: Destino = P3 Valor = 42 | Cadeia: C1
+[Processo P3] Evento: RECEIVE | Relogio Logico: 13 | Detalhes: Origem = P2 Valor = 42 | Cadeia: C1
+[Processo P3] Evento: EXEC | Relogio Logico: 14 | Detalhes: Valor = 42 Resultado = 45 | Cadeia: C1
+[Processo P3] Evento: SEND | Relogio Logico: 15 | Detalhes: Destino = P2 Valor = 45 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 16 | Detalhes: Origem = P3 Valor = 45 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 17 | Detalhes: Valor = 45 Resultado = 90 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 18 | Detalhes: Destino = P1 Valor = 90 | Cadeia: C1
+[Processo P1] Evento: RECEIVE | Relogio Logico: 19 | Detalhes: Origem = P2 Valor = 90 | Cadeia: C1
+[Processo P1] Evento: EXEC | Relogio Logico: 20 | Detalhes: Valor = 90 Resultado = 89 | Cadeia: C1
+[Processo P1] Evento: END | Relogio Logico: 20 | Detalhes: Experimento = 1 Cadeia = C1 | Cadeia: C1
+
+======================================================================
+EXPERIMENTO 2 - EVENTOS ORDENADOS
+======================================================================
+[Processo P1] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P2] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P3] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P1] Evento: RECEIVE | Relogio Logico: 1 | Detalhes: Origem = MAIN Valor = 10 | Cadeia: C1
+[Processo P3] Evento: RECEIVE | Relogio Logico: 1 | Detalhes: Origem = MAIN Valor = 10 | Cadeia: C2
+[Processo P1] Evento: EXEC | Relogio Logico: 2 | Detalhes: Valor = 10 Resultado = 9 | Cadeia: C1
+[Processo P3] Evento: EXEC | Relogio Logico: 2 | Detalhes: Valor = 10 Resultado = 13 | Cadeia: C2
+[Processo P1] Evento: SEND | Relogio Logico: 3 | Detalhes: Destino = P2 Valor = 9 | Cadeia: C1
+[Processo P3] Evento: SEND | Relogio Logico: 3 | Detalhes: Destino = P2 Valor = 13 | Cadeia: C2
+[Processo P2] Evento: RECEIVE | Relogio Logico: 4 | Detalhes: Origem = P1 Valor = 9 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 5 | Detalhes: Valor = 9 Resultado = 18 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 6 | Detalhes: Destino = P3 Valor = 18 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 7 | Detalhes: Origem = P3 Valor = 13 | Cadeia: C2
+[Processo P3] Evento: RECEIVE | Relogio Logico: 7 | Detalhes: Origem = P2 Valor = 18 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 8 | Detalhes: Valor = 13 Resultado = 26 | Cadeia: C2
+[Processo P3] Evento: EXEC | Relogio Logico: 8 | Detalhes: Valor = 18 Resultado = 21 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 9 | Detalhes: Destino = P3 Valor = 26 | Cadeia: C2
+[Processo P3] Evento: SEND | Relogio Logico: 9 | Detalhes: Destino = P2 Valor = 21 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 10 | Detalhes: Origem = P3 Valor = 21 | Cadeia: C1
+[Processo P3] Evento: RECEIVE | Relogio Logico: 10 | Detalhes: Origem = P2 Valor = 26 | Cadeia: C2
+[Processo P2] Evento: EXEC | Relogio Logico: 11 | Detalhes: Valor = 21 Resultado = 42 | Cadeia: C1
+[Processo P3] Evento: EXEC | Relogio Logico: 11 | Detalhes: Valor = 26 Resultado = 29 | Cadeia: C2
+[Processo P2] Evento: SEND | Relogio Logico: 12 | Detalhes: Destino = P1 Valor = 42 | Cadeia: C1
+[Processo P3] Evento: SEND | Relogio Logico: 12 | Detalhes: Destino = P2 Valor = 29 | Cadeia: C2
+[Processo P1] Evento: RECEIVE | Relogio Logico: 13 | Detalhes: Origem = P2 Valor = 42 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 13 | Detalhes: Origem = P3 Valor = 29 | Cadeia: C2
+[Processo P1] Evento: EXEC | Relogio Logico: 14 | Detalhes: Valor = 42 Resultado = 41 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 14 | Detalhes: Valor = 29 Resultado = 58 | Cadeia: C2
+[Processo P1] Evento: SEND | Relogio Logico: 15 | Detalhes: Destino = P3 Valor = 41 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 15 | Detalhes: Destino = P3 Valor = 58 | Cadeia: C2
+[Processo P3] Evento: RECEIVE | Relogio Logico: 16 | Detalhes: Origem = P1 Valor = 41 | Cadeia: C1
+[Processo P3] Evento: EXEC | Relogio Logico: 17 | Detalhes: Valor = 41 Resultado = 44 | Cadeia: C1
+[Processo P3] Evento: END | Relogio Logico: 17 | Detalhes: Experimento = 2 Cadeia = C1 | Cadeia: C1
+[Processo P3] Evento: RECEIVE | Relogio Logico: 18 | Detalhes: Origem = P2 Valor = 58 | Cadeia: C2
+[Processo P3] Evento: EXEC | Relogio Logico: 19 | Detalhes: Valor = 58 Resultado = 61 | Cadeia: C2
+[Processo P3] Evento: END | Relogio Logico: 19 | Detalhes: Experimento = 2 Cadeia = C2 | Cadeia: C2
+
+======================================================================
+EXPERIMENTO 3 - EVENTOS ORDENADOS
+======================================================================
+[Processo P1] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P2] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P3] Evento: RESET | Relogio Logico: 0 | Detalhes: Relogio resetado para 0
+[Processo P1] Evento: RECEIVE | Relogio Logico: 1 | Detalhes: Origem = MAIN Valor = 10 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 1 | Detalhes: Origem = MAIN Valor = 10 | Cadeia: C2
+[Processo P3] Evento: RECEIVE | Relogio Logico: 1 | Detalhes: Origem = MAIN Valor = 10 | Cadeia: C3
+[Processo P1] Evento: EXEC | Relogio Logico: 2 | Detalhes: Valor = 10 Resultado = 9 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 2 | Detalhes: Valor = 10 Resultado = 20 | Cadeia: C2
+[Processo P3] Evento: EXEC | Relogio Logico: 2 | Detalhes: Valor = 10 Resultado = 13 | Cadeia: C3
+[Processo P1] Evento: SEND | Relogio Logico: 3 | Detalhes: Destino = P2 Valor = 9 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 3 | Detalhes: Destino = P3 Valor = 20 | Cadeia: C2
+[Processo P3] Evento: SEND | Relogio Logico: 3 | Detalhes: Destino = P1 Valor = 13 | Cadeia: C3
+[Processo P1] Evento: RECEIVE | Relogio Logico: 4 | Detalhes: Origem = P3 Valor = 13 | Cadeia: C3
+[Processo P2] Evento: RECEIVE | Relogio Logico: 4 | Detalhes: Origem = P1 Valor = 9 | Cadeia: C1
+[Processo P3] Evento: RECEIVE | Relogio Logico: 4 | Detalhes: Origem = P2 Valor = 20 | Cadeia: C2
+[Processo P1] Evento: EXEC | Relogio Logico: 5 | Detalhes: Valor = 13 Resultado = 12 | Cadeia: C3
+[Processo P2] Evento: EXEC | Relogio Logico: 5 | Detalhes: Valor = 9 Resultado = 18 | Cadeia: C1
+[Processo P3] Evento: EXEC | Relogio Logico: 5 | Detalhes: Valor = 20 Resultado = 23 | Cadeia: C2
+[Processo P1] Evento: SEND | Relogio Logico: 6 | Detalhes: Destino = P3 Valor = 12 | Cadeia: C3
+[Processo P2] Evento: SEND | Relogio Logico: 6 | Detalhes: Destino = P3 Valor = 18 | Cadeia: C1
+[Processo P3] Evento: SEND | Relogio Logico: 6 | Detalhes: Destino = P1 Valor = 23 | Cadeia: C2
+[Processo P1] Evento: RECEIVE | Relogio Logico: 7 | Detalhes: Origem = P3 Valor = 23 | Cadeia: C2
+[Processo P3] Evento: RECEIVE | Relogio Logico: 7 | Detalhes: Origem = P1 Valor = 12 | Cadeia: C3
+[Processo P1] Evento: EXEC | Relogio Logico: 8 | Detalhes: Valor = 23 Resultado = 22 | Cadeia: C2
+[Processo P3] Evento: EXEC | Relogio Logico: 8 | Detalhes: Valor = 12 Resultado = 15 | Cadeia: C3
+[Processo P1] Evento: SEND | Relogio Logico: 9 | Detalhes: Destino = P2 Valor = 22 | Cadeia: C2
+[Processo P3] Evento: SEND | Relogio Logico: 9 | Detalhes: Destino = P2 Valor = 15 | Cadeia: C3
+[Processo P2] Evento: RECEIVE | Relogio Logico: 10 | Detalhes: Origem = P1 Valor = 22 | Cadeia: C2
+[Processo P3] Evento: RECEIVE | Relogio Logico: 10 | Detalhes: Origem = P2 Valor = 18 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 11 | Detalhes: Valor = 22 Resultado = 44 | Cadeia: C2
+[Processo P3] Evento: EXEC | Relogio Logico: 11 | Detalhes: Valor = 18 Resultado = 21 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 12 | Detalhes: Destino = P3 Valor = 44 | Cadeia: C2
+[Processo P3] Evento: SEND | Relogio Logico: 12 | Detalhes: Destino = P2 Valor = 21 | Cadeia: C1
+[Processo P2] Evento: RECEIVE | Relogio Logico: 13 | Detalhes: Origem = P3 Valor = 15 | Cadeia: C3
+[Processo P3] Evento: RECEIVE | Relogio Logico: 13 | Detalhes: Origem = P2 Valor = 44 | Cadeia: C2
+[Processo P2] Evento: EXEC | Relogio Logico: 14 | Detalhes: Valor = 15 Resultado = 30 | Cadeia: C3
+[Processo P2] Evento: END | Relogio Logico: 14 | Detalhes: Experimento = 3 Cadeia = C3 | Cadeia: C3
+[Processo P3] Evento: EXEC | Relogio Logico: 14 | Detalhes: Valor = 44 Resultado = 47 | Cadeia: C2
+[Processo P3] Evento: END | Relogio Logico: 14 | Detalhes: Experimento = 3 Cadeia = C2 | Cadeia: C2
+[Processo P2] Evento: RECEIVE | Relogio Logico: 15 | Detalhes: Origem = P3 Valor = 21 | Cadeia: C1
+[Processo P2] Evento: EXEC | Relogio Logico: 16 | Detalhes: Valor = 21 Resultado = 42 | Cadeia: C1
+[Processo P2] Evento: SEND | Relogio Logico: 17 | Detalhes: Destino = P1 Valor = 42 | Cadeia: C1
+[Processo P1] Evento: RECEIVE | Relogio Logico: 18 | Detalhes: Origem = P2 Valor = 42 | Cadeia: C1
+[Processo P1] Evento: EXEC | Relogio Logico: 19 | Detalhes: Valor = 42 Resultado = 41 | Cadeia: C1
+[Processo P1] Evento: END | Relogio Logico: 19 | Detalhes: Experimento = 3 Cadeia = C1 | Cadeia: C1
