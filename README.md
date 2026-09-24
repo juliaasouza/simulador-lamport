@@ -1,5 +1,7 @@
 # simulador-lamport
 
+*Trabalho realizado como tarefa da disciplina de Sistemas Distibuídos PGC UFF 2026.2*
+
 O código foi escrito em Python. Ele não recebe argumentos de linha de execução. Deve ser chamado através da main (py ./main.py).
 
 As configurações do projeto podem ser acessadas e alteradas livremente dentro de config.py contanto que respeitem o formato adequado. Dessa maneira, é possível alterar o valor inicial de uma cadeia de processos e outros detalhes dos experimentos. 
